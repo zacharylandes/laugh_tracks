@@ -1,0 +1,13 @@
+<h1>I got the funnies</h1>
+
+All Comedians have an average age of: <%=@average%>
+
+    <%@comedians.each do |comedian|%>
+      <h4>Name:<%=comedian.name%></h4>
+      <p>Age:<%=comedian.age%></p>
+      <p>Specials:
+        <%comedian.specials.each do |special|%>
+            <p><%=special[:name]%></p>
+        <%end%>
+      <p>This comedian has <%=comedian.specials.count%> Specials
+    <%end%>
